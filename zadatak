@@ -2,4 +2,98 @@
 #include<cmath>
 
 
-usingnamespace
+using namespace std
+class Trougao(){
+protected:
+int a,b,c;
+public:
+  Trougao(int d,int e,int f){
+  if(d>e+f)
+  {cout<<"Greska!"<<endl;}
+  else if(e>d+f)
+  {cout<<"Greska!"<<endl;}
+  else if(f>e+f)
+  {cout<<"Greska!"<<endl;} 
+  else{
+  a = d;
+  b = e;
+  c = f;
+  
+  }
+  Trougao(const Trougao,&trg)
+  {
+      a = trg.a;
+      b = trg.b;
+      c = trg.c;
+  }
+  bool setA(int trg)
+  {
+    if(trg<=c+b)
+    {
+     a = trg;
+     return true;
+    }else{return false;}
+  
+  }
+   bool setB(int trg)
+  {
+    if(trg<=a+c)
+    {
+     b =  trg;
+     return true;
+    }else{return false;}
+  
+  }
+   bool setC(int trg)
+  {
+    if(trg<=a + b)
+    {
+     c = trg;
+     return true;
+    }else{return false;}
+  
+  } 
+  
+  }
+int getA()const
+{
+        return a;
+    }
+    int getB()const
+    {
+        return b;
+    }
+    int getC()const
+    {
+        return c;
+    }
+};
+
+class JKTrougao : public Trougao
+{private:
+JKTtrouga() : Trougao(2,3,4){}
+JKTrougao(int e,int d) : Trougao(e,d,d){}
+JKTrougao(const JKTrougao &trg){
+
+      a = trg.a;
+      b = trg.b;
+      c = trg.c;
+
+};
+class JSTrougao : public Trougao
+{private:
+JSTtrouga() : Trougao(4,4){}
+JSTrougao(int e) : Trougao(e,e{}
+JSrougao(const JSrougao &trg){
+
+      a = trg.a;
+      b = trg.b;
+      c = trg.c;
+
+};
+
+
+
+
+
+}
